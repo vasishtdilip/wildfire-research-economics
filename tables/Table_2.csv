@@ -1,0 +1,14 @@
+Input,Base value,Interpretation
+Annual US building-loss baseline L,US$3.674507475bn,FEMA aggregation
+Projects N,20,"Parallel, substitutable pathways"
+"Stage costs at years 0, 1, 3","US$0.25m, 1m, 2m",Conditional payments
+Conditional gate-pass probabilities,"25%, 20%",Useful completion p = 5%
+Technical correlation ρ,0,Independent base case
+Real discount rate d,3%,All cash flows discounted consistently
+Commissioning year T,5,Benefits and maintenance in years 6–15
+Benefit life H,10 years,No residual value
+Covered loss share a,5%,"Share of expected loss, not land area"
+Commissioning cost ratio k₀,0.6 years,Upfront cost divided by covered annual loss
+Annual maintenance ratio m,1%,Annual maintenance divided by covered annual loss
+Effectiveness r,15%,Constant base-case reduction in covered loss
+Maturity gⱼ,1 throughout,Delayed development tested separately

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "runtime_versions": {
+    "python": "3.12.14",
+    "node": "v24.22.1",
+    "matplotlib": "3.10.8"
+  },
+  "raw_records": 3232,
+  "retained_counties": 3144,
+  "US_building_EAL": 3674507475.328936,
+  "California_building_EAL": 1706431467.3970764,
+  "base_rmin": 0.09381139444507651,
+  "base_NPV": 48730045.808097765,
+  "commissioning_cost_limit": 1.079300202499086,
+  "b2_commissioning_cost_limit": 0.43953498974089905,
+  "conditional_research_PV_ceiling": 60414698.05884292,
+  "numerical_assertions": "passed",
+  "table_checks": {
+    "tables_checked": 7,
+    "rounded_numeric_values": "passed"
+  },
+  "figures_regenerated": true
+}

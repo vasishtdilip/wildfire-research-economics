@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this data and code supplement when using its calculations or derived outputs. Add the repository-issued DOI after publication."
+type: software
+title: "Data and code for Valuing staged research portfolios for wildfire prevention"
+version: 1.0.0
+authors:
+  - family-names: Dilip
+    given-names: Vaishnavi
+    affiliation: "Independent Student Researcher, Bangalore, India"
+abstract: "Reproducible staged wildfire research-portfolio economics with adoption-dependent deployment costs, inverse effectiveness and commissioning-cost targets, technical correlation, and a separate value-of-information example. Includes archived FEMA National Risk Index county building-value expected annual loss data and provenance."
+keywords:
+  - wildfire economics
+  - research portfolios
+  - commissioning cost
+  - value of information
+  - FEMA National Risk Index

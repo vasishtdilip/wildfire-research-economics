@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "title": "Data and code for Valuing staged research portfolios for wildfire prevention",
+    "upload_type": "dataset",
+    "description": "Reproducibility supplement for the economics of staged wildfire prevention research portfolios. Includes the archived FEMA National Risk Index version 1.20.0 county building-value expected annual loss extract and source provenance; a single implementation of adoption-dependent deployment costs, staged research portfolios, correlated outcomes, inverse effectiveness and commissioning-cost targets, conditional research-budget ceilings, and a separate information-value example; numerical outputs; seven manuscript tables; and four figures. Deployment and scientific inputs are illustrative scenarios, not empirical estimates of plant technology performance. FEMA source materials retain their source terms.",
+    "creators": [
+      {
+        "name": "Dilip, Vaishnavi",
+        "affiliation": "Independent Student Researcher, Bangalore, India"
+      }
+    ],
+    "version": "1.0.0",
+    "access_right": "open",
+    "keywords": [
+      "wildfire economics",
+      "research portfolios",
+      "deployment costs",
+      "value of information",
+      "FEMA National Risk Index"
+    ],
+    "language": "eng"
+  }
+}

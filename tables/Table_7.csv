@@ -1,0 +1,5 @@
+Underlying state,Test signal,Joint probability,Action after signal,"Deployment NPV, US$m"
+Useful,Positive,0.51,Deploy,60
+Useful,Negative,0.09,Do not deploy,0
+Ineffective,Positive,0.08,Deploy,−40
+Ineffective,Negative,0.32,Do not deploy,0

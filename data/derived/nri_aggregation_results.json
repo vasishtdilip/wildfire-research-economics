@@ -1,0 +1,19 @@
+{
+  "version": "December 2025 1.20.0",
+  "retrieved_date": "2026-10-25",
+  "price_basis": "December 2024 USD",
+  "unit": "US dollars per year",
+  "raw_counties_and_equivalents": 3232,
+  "counties": 3144,
+  "geographic_scope": "50 states and District of Columbia",
+  "annual_building_value_eal": {
+    "United States": 3674507475.328936,
+    "California": 1706431467.3970764,
+    "Los Angeles County": 148555889.61651185
+  },
+  "checks": {
+    "unique_ids": true,
+    "nonnegative_finite_values": true,
+    "paginated_and_combined_snapshots_equal": true
+  }
+}

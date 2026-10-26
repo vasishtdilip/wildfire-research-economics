@@ -1,0 +1,69 @@
+{
+  "preferred_denominator": "Author-calculated sum of FEMA NRI v1.20 wildfire building-value Expected Annual Loss (WFIR_EALB)",
+  "retrieved_utc_date": "2026-10-25",
+  "source_version": "December 2025 (1.20.0)",
+  "unit": "US dollars per year, December 2024 price basis",
+  "national_50_states_dc": {
+    "counties_and_equivalents": 3144,
+    "unique_stcofips": 3144,
+    "wildfire_building_eal_usd": 3674507475.328936,
+    "wildfire_all_consequences_eal_usd_do_not_use_as_building_loss": 3894485335.412795,
+    "null_building_eal_rows": 0,
+    "negative_building_eal_rows": 0
+  },
+  "california": {
+    "counties": 58,
+    "wildfire_building_eal_usd": 1706431467.3970764
+  },
+  "los_angeles_county": {
+    "fips": "06037",
+    "wildfire_building_eal_usd": 148555889.61651185
+  },
+  "source_fields": {
+    "WFIR_EALB": "Wildfire - Expected Annual Loss - Building Value",
+    "WFIR_EALT": "Wildfire - Expected Annual Loss - Total; includes population-equivalence and agriculture, do not substitute for WFIR_EALB",
+    "NRI_VER": "December 2025"
+  },
+  "source_links": {
+    "field_definitions_and_service": "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_County_Wildfire_Expected_Annual_Loss_Rating/FeatureServer/0",
+    "fema_owned_item": "https://www.arcgis.com/home/item.html?id=597c321c0bc0480aa3d051df80ea4598",
+    "fema_item_json": "https://www.arcgis.com/sharing/rest/content/items/597c321c0bc0480aa3d051df80ea4598?f=json",
+    "metadata_confirming_price_basis": "https://www.arcgis.com/sharing/rest/content/items/9da4eeb936544335a6db0cd7a8448a51/info/metadata/metadata.xml?format=default&output=html",
+    "original_technical_documentation": "https://www.fema.gov/sites/default/files/documents/fema_national-risk-index_technical-documentation.pdf",
+    "technical_documentation_original_fema_reproduced_in_regulatory_docket_part2": "https://ripuc.ri.gov/sites/g/files/xkgbur841/files/2026-02/RIE%20Rsp%20DIV7%20%28B2P3%29%20%28DIV%207-9-14%2C%20pp%20234%20to%20467%29%28P%29.pdf",
+    "hazard_info_table": "https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/National_Risk_Index_Hazard_Info_Table/FeatureServer/0",
+    "official_dataset_about": "https://resilience-fema.hub.arcgis.com/datasets/FEMA%3A%3Anational-risk-index-counties/about"
+  },
+  "methodology": {
+    "frequency_model": "FEMA hazard-info table directly reports Wildfire PeriodOfRecord = 2024 dataset, FrequencyModel = Probability; do not describe as a single observed year.",
+    "hazard_simulation": "Technical chapter22 describes FSim simulation of many hypothetical contemporary seasons under 2024 landscape conditions and management practices, generating probability of large fires that escape initial suppression on a 270m grid.",
+    "loss_calibration": "Technical p22-9, Table85: SHELDUS wildfire losses from1996\u20132023,150Fire-Forest records and3708Wildfire records. Building HLR defaults for counties intersecting flame-intensity-class6 cells are0.3West,0.1Southeast,0.1Northeast; calibrated to regional mean annual SHELDUS building loss.",
+    "exposure_pricebasis": "FEMA ArcGIS metadata: building and population exposures from Hazus6.0, inflation adjusted to December2024 dollars. County boundaries Census2021TIGER, exceptConnecticut2024TIGER.",
+    "building_definition_limit": "The directly verified field is building-value EAL. I have not established an explicit source statement excluding contents or business interruption from SHELDUS calibration. Therefore call it building-value EAL, not a precisely isolated structural-replacement or insured-property-loss account. It is clearly separate from population/agriculture consequences in the data.",
+    "aggregation": "Fetch all3232 county/equivalent rows in two API pages, filter50states+DC (3144 rows), sum WFIR_EALB. All88 territorial rows have zero wildfire building EAL, so includingthem leaves the same sum. The sum is an author calculation, not a FEMA-published national headline.",
+    "no_double_count": "Sum county rows only. Never add overlapping census-tract totals, WFIR_EALT, insured payouts, or separate historical property loss estimates."
+  },
+  "reproducibility": {
+    "query_urls": [
+      "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_County_Wildfire_Expected_Annual_Loss_Rating/FeatureServer/0/query?where=1%3D1&outFields=STATE%2CSTATEABBRV%2CCOUNTY%2CSTCOFIPS%2CWFIR_EALB%2CWFIR_EALT%2CWFIR_EALP%2CWFIR_EALPE%2CBUILDVALUE%2CNRI_VER&returnGeometry=false&f=json&resultRecordCount=2000&resultOffset=0",
+      "https://services.arcgis.com/XG15cJAlne2vxtgt/ArcGIS/rest/services/National_Risk_Index_County_Wildfire_Expected_Annual_Loss_Rating/FeatureServer/0/query?where=1%3D1&outFields=STATE%2CSTATEABBRV%2CCOUNTY%2CSTCOFIPS%2CWFIR_EALB%2CWFIR_EALT%2CWFIR_EALP%2CWFIR_EALPE%2CBUILDVALUE%2CNRI_VER&returnGeometry=false&f=json&resultRecordCount=2000&resultOffset=2000"
+    ],
+    "raw_response_files": [
+      "nri_counties_0.json",
+      "nri_counties_2000.json"
+    ],
+    "extracted_rows_file": "nri_wildfire_county_fields.json",
+    "extracted_rows_sha256": "ea0c0055a0182d71c153a570dd4062c708fa84abce80b218630655f70a3af6be",
+    "owner_verification_file": "nri_wildfire_item.json; owner=FEMA_NationalRiskIndex",
+    "hazard_info_source_note": "The hazard-info service URL is provided above; its source record is not redistributed as a separate snapshot in this package."
+  },
+  "model_recommendation": "Use L0 = US$3.6745B/year in December2024 dollars as a screening baseline. Apply separately specified eligible-loss share, successful adoption, and incremental loss-reduction effectiveness relative to current management; model R&D success and delay. Do not claim allL0is addressable by plant research. If the scope is California useUS$1.7064B/year; a national rollout cannot also addCalifornia orLA EAL. All model costs must share this real-price basis or be converted transparently.",
+  "limitations": [
+    "Modelled planning baseline, not observed annual damage or an audited expenditure series.",
+    "Not property-level underwriting or local engineering risk; county averages conceal within-county variation.",
+    "The2025LAcatastrophe is not in the1996\u20132023loss-calibration record.",
+    "Landscape and future climate changes are not automatically forecast by this baseline.",
+    "No source establishes an eligible share or wildfire-loss reduction effect for GMO/low-flammability vegetation; those remain scenarios."
+  ],
+  "attribution_notice": "This product uses the Federal Emergency Management Agency\u2019s National Risk Index dataset API or downloadable datasets but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency\u2019s website(s)."
+}
